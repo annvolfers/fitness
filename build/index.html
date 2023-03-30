@@ -18,9 +18,44 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container"></div>
-    </header>
+    <div class="page-header">
+      <header class="page-header__container container">
+        <a class="page-header__logo-link" href="index.html">
+          <svg class="page-header__logo" width="119" height="23" role="img" aria-label="Логотип компании."
+            focusable="false" fill="currentColor">
+            <use xlink:href="./img/svg/logo.svg#logo" />
+          </svg>
+        </a>
+        <address class="page-header__phone-wrapper">
+          <a class="page-header__phone" href="tel:+78005555555">8-800-555-55-55</a>
+        </address>
+      </header>
+      <section class="page-header__intro intro container">
+        <p class="intro__label">омск</p>
+        <h1 class="intro__title">Фитнес центр</h1>
+        <ul class="intro__list">
+          <li>Тренажёрный зал</li>
+          <li>Групповые занятия</li>
+          <li>Кардио-зона</li>
+        </ul>
+        <a class="intro__button button" href="#subscription">Купить абонемент</a>
+        <div class="intro__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="./img/intro/intro-mobile.webp 1x, ./img/intro/intro-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1199px)"
+              srcset="./img/intro/intro-tablet.webp 1x, ./img/intro/intro-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/intro/intro-desktop.webp 1x, ./img/intro/intro-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)"
+              srcset="./img/intro/intro-mobile.jpg 1x, ./img/intro/intro-mobile@2x.jpg 2x">
+            <source media="(max-width: 1199px)"
+              srcset="./img/intro/intro-tablet.jpg 1x, ./img/intro/intro-tablet@2x.jpg 2x">
+            <img class="intro__image" width="500" height="556" src="./img/intro/intro-desktop.jpg"
+              srcset="./img/intro/intro-desktop@2x.jpg 2x" alt="Спортсмен в футболке с логотипом супермена.">
+          </picture>
+        </div>
+      </section>
+    </div>
 
     <main></main>
 
