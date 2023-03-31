@@ -1,0 +1,156 @@
+.video {
+  position: relative;
+  padding-bottom: 62.7%;
+
+  @include vp-1199 {
+    padding-bottom: 62.9%;
+  }
+
+  @include vp-767 {
+    padding-bottom: 52.1%;
+  }
+}
+
+.video__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.video.is-active .video__iframe {
+  display: block;
+}
+
+.video__button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background-color: $color-dark-gray;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  transition: opacity $trans-default, visibility $trans-default;
+
+  @media (min-width: $vp-1200) {
+    background-image: url("../img/gym/preview-desktop.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/gym/preview-desktop@2x.jpg");
+    }
+
+    @supports (background-image: url("../img/gym/preview-desktop.webp")) {
+      background-image: url("../img/gym/preview-desktop.webp");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/gym/preview-desktop@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: ($vp-1200 - 1px)) and (min-width: $vp-768) {
+    background-image: url("../img/gym/preview-tablet.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/gym/preview-tablet@2x.jpg");
+    }
+
+    @supports (background-image: url("../img/gym/preview-tablet.webp")) {
+      background-image: url("../img/gym/preview-tablet.webp");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/gym/preview-tablet@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: ($vp-768 - 1px)) and (min-width: 320px) {
+    background-image: url("../img/gym/preview-mobile.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/gym/preview-mobile@2x.jpg");
+    }
+
+    @supports (background-image: url("../img/gym/preview-mobile.webp")) {
+      background-image: url("../img/gym/preview-mobile.webp");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/gym/preview-mobile@2x.webp");
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color-dark-cerulean--50;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background-image: url("../img/svg/play-button.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform $trans-default, opacity $trans-default;
+
+    @include vp-1199 {
+      width: 73px;
+      height: 73px;
+    }
+  }
+
+  &:hover {
+    &::after {
+      transform: scale(1.2);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    &::after {
+      outline: 2px solid $color-white;
+      outline-offset: 4px;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+
+    &::after {
+      background-image: url("../img/svg/play-button-disabled.svg");
+    }
+  }
+}
+
+.video.is-active .video__button {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
