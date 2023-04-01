@@ -37,7 +37,9 @@ $cerulean-red--to-right-top:        linear-gradient(44.89deg, #003d85 25.38%, #b
 $red-cobalt--to-right:              linear-gradient(97.05deg, $color-torch-red 17.6%, #003eb7 95.31%);
 $crimson-smalt--to-right-bottom:    linear-gradient(to right bottom, $color-crimson, #00359f);
 $crimson-cobalt--to-right-bottom:   linear-gradient(142.51deg, $color-crimson 0%, #0041ca 87.33%);
-
+$transparent-white--to-top-desktop: linear-gradient(to top, transparent 70px, $color-ghost-white 70px);
+$transparent-white--to-top-tablet:  linear-gradient(to top, transparent 60px, $color-ghost-white 60px);
+$grey-transparent--to-top:          linear-gradient(to top, $color-grey--20 2px, transparent 2px);
 // Typography
 // ---------------------------------
 

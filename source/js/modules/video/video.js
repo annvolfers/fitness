@@ -27,13 +27,13 @@ export class Video {
         videoId: this.video.id,
         events: {
           'onReady': this.enablePlayButton.bind(this),
-          'onStateChange': this.returnPlayButton.bind(this),
+          'onStateChange': this.putPlayButtonBack.bind(this),
         },
       });
     };
   }
 
-  returnPlayButton(event) {
+  putPlayButtonBack(event) {
     if (event.data === 0) {
       this.container.classList.remove('is-active');
     }

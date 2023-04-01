@@ -32,7 +32,7 @@ body {
   width: 100%;
   height: 100%;
 
-  background-color: $color-ghost-white;
+  background-color: $color-white;
 }
 
 a {
@@ -58,7 +58,7 @@ textarea {
 // если в стилях уже используется box-shadow есть другое решение -
 // задать к списку транзишенов `background-color 10000000s ease-out`
 input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-ghost-white;
+  box-shadow: inset 0 0 0 1000px $color-white;
 
   -webkit-text-fill-color: $color-sapphire;
 }

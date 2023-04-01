@@ -470,7 +470,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #f8f9fc;
+  background-color: #ffffff;
 }
 
 a {
@@ -490,8 +490,8 @@ textarea {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: inset 0 0 0 1000px #f8f9fc;
-  box-shadow: inset 0 0 0 1000px #f8f9fc;
+  -webkit-box-shadow: inset 0 0 0 1000px #ffffff;
+  box-shadow: inset 0 0 0 1000px #ffffff;
   -webkit-text-fill-color: #102654;
 }
 
@@ -883,7 +883,6 @@ button,
   gap: 86px;
   padding-top: 120px;
   padding-bottom: 120px;
-  background-color: #ffffff;
 }
 
 .gym__text-wrapper {
@@ -1027,6 +1026,252 @@ button,
   pointer-events: none;
 }
 
+.tariffs {
+  position: relative;
+  padding-top: 122px;
+  padding-bottom: 190px;
+  background-image: -o-linear-gradient(bottom, transparent 70px, #f8f9fc 70px);
+  background-image: linear-gradient(to top, transparent 70px, #f8f9fc 70px);
+  overflow: hidden;
+}
+
+.tariffs::after {
+  content: "";
+  position: absolute;
+  right: -107px;
+  bottom: -25px;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.tariffs__container {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.tariffs h2 {
+  margin: 0;
+  margin-right: 4px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 62px;
+  letter-spacing: 0.03em;
+}
+
+.tariffs__buttons-wrapper {
+  width: 29.5%;
+  margin-bottom: 38px;
+  background-image: -o-linear-gradient(bottom, rgba(120, 120, 120, 0.2) 2px, transparent 2px);
+  background-image: linear-gradient(to top, rgba(120, 120, 120, 0.2) 2px, transparent 2px);
+  overflow-y: auto;
+}
+
+.tariffs__buttons {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+  overflow-y: auto;
+}
+
+.tariffs__button {
+  height: 100%;
+  padding: 18px 2px 13px;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgba(16, 38, 84, 0.5);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease, color 0.3s ease;
+  -o-transition: opacity 0.3s ease, color 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.tariffs__button.is-active {
+  position: relative;
+  color: #102654;
+}
+
+.tariffs__button.is-active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #d10a42;
+}
+
+.tariffs__button:hover {
+  color: #102654;
+  opacity: 0.8;
+}
+
+.tariffs__button:focus-visible {
+  outline: 2px solid #102654;
+  outline-offset: -2px;
+}
+
+.tariffs__button:active {
+  color: #102654;
+  opacity: 0.6;
+}
+
+.tariffs__tabs {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tariffs__tab:not(.is-active) {
+  display: none;
+}
+
+.tariffs__cards {
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  list-style: none;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 56px 35px 60px;
+  background-color: #ffffff;
+  border: 7px solid transparent;
+}
+
+.card:hover {
+  -o-border-image: -o-linear-gradient(left top, #d10a42, #00359f) 1;
+  border-image: -webkit-gradient(linear, left top, right bottom, from(#d10a42), to(#00359f)) 1;
+  border-image: linear-gradient(to right bottom, #d10a42, #00359f) 1;
+}
+
+.card h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 26px;
+  line-height: 29px;
+  text-align: center;
+  color: #102654;
+}
+
+.card p {
+  margin: 0;
+  margin-bottom: 65px;
+  color: #495a7d;
+}
+
+.card strong {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  margin-bottom: 34px;
+  margin-left: 1px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: #103aae;
+}
+
+.card strong::before {
+  content: attr(data-price);
+  position: absolute;
+  z-index: -1;
+  top: -54px;
+  left: 50%;
+  display: block;
+  font-size: 100px;
+  line-height: 150px;
+  color: #e8e8e8;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: 0.48;
+}
+
+.card span {
+  color: #102654;
+}
+
+.card a {
+  display: block;
+  width: 75%;
+  max-width: 400px;
+  margin-top: auto;
+  padding: 25px 30px 23px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #102654;
+  text-align: center;
+  border: 2px solid #102654;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.card a:hover {
+  opacity: 0.8;
+}
+
+.card a:focus-visible {
+  outline: 2px solid #102654;
+  outline-offset: 4px;
+}
+
+.card a:active {
+  opacity: 0.6;
+}
+
+.card:hover a {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-image: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1084,11 +1329,34 @@ button,
       }
 }
 }
+
+  .tariffs::after {
+    width: 321px;
+    height: 384px;
+    background-image: url("../img/tariffs/disks-desktop.png");
+    background-size: 321px 384px;
+  }
+
+@supports (background-image: url("../img/tariffs/disks-desktop.webp")) {
+    .tariffs::after {
+      background-image: url("../img/tariffs/disks-desktop.webp");
+    }
+
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1200px) and (min-resolution: 2dppx) {
+      .tariffs::after {
+        background-image: url("../img/tariffs/disks-desktop@2x.webp");
+      }
+}
+}
 }
 
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1200px) and (min-resolution: 2dppx) {
   .video__button {
     background-image: url("../img/gym/preview-desktop@2x.jpg");
+  }
+
+  .tariffs::after {
+    background-image: url("../img/tariffs/disks-desktop@2x.png");
   }
 }
 
@@ -1214,6 +1482,46 @@ button,
   .video__button::after {
     width: 73px;
     height: 73px;
+  }
+
+  .tariffs {
+    padding-top: 102px;
+    padding-bottom: 160px;
+    background-image: -o-linear-gradient(bottom, transparent 60px, #f8f9fc 60px);
+    background-image: linear-gradient(to top, transparent 60px, #f8f9fc 60px);
+  }
+
+  .tariffs h2 {
+    margin-right: 11px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .tariffs__buttons-wrapper {
+    width: 49%;
+    margin-bottom: 44px;
+  }
+
+  .tariffs__button {
+    padding-top: 20px;
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .tariffs__cards {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 65.1%;
+    margin: 0 auto;
+  }
+
+  .card {
+    padding: 56px 40px 60px;
+  }
+
+  .card a {
+    width: 60%;
   }
 }
 
@@ -1341,6 +1649,66 @@ button,
   .video {
     padding-bottom: 52.1%;
   }
+
+  .tariffs {
+    padding-top: 63px;
+    padding-bottom: 70px;
+    background-image: none;
+    background-color: #f8f9fc;
+  }
+
+  .tariffs h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .tariffs__buttons-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 34px;
+  }
+
+  .tariffs__button {
+    padding: 21px 0 15px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .tariffs__cards {
+    gap: 35px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .card {
+    padding: 44px 34px 48px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  .card p {
+    margin-bottom: 52px;
+  }
+
+  .card strong {
+    margin-bottom: 30px;
+    margin-left: 4px;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  .card strong::before {
+    top: -45px;
+    font-size: 80px;
+    line-height: 120px;
+  }
+
+  .card a {
+    width: 100%;
+  }
 }
 
 @media (max-width: 599px) {
@@ -1365,11 +1733,36 @@ button,
       }
 }
 }
+
+  .tariffs::after {
+    right: -9px;
+    bottom: -15px;
+    width: 289px;
+    height: 345px;
+    background-image: url("../img/tariffs/disks-tablet.png");
+    background-size: 289px 345px;
+  }
+
+@supports (background-image: url("../img/tariffs/disks-tablet.webp")) {
+    .tariffs::after {
+      background-image: url("../img/tariffs/disks-tablet.webp");
+    }
+
+@media (max-width: 1199px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1199px) and (min-width: 768px) and (min-resolution: 2dppx) {
+      .tariffs::after {
+        background-image: url("../img/tariffs/disks-tablet@2x.webp");
+      }
+}
+}
 }
 
 @media (max-width: 1199px) and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (min-width: 768px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1199px) and (min-width: 768px) and (min-resolution: 2dppx) {
   .video__button {
     background-image: url("../img/gym/preview-tablet@2x.jpg");
+  }
+
+  .tariffs::after {
+    background-image: url("../img/tariffs/disks-tablet@2x.png");
   }
 }
 
@@ -1389,6 +1782,10 @@ button,
       }
 }
 }
+
+  .tariffs::after {
+    background-image: none;
+  }
 }
 
 @media (max-width: 767px) and (min-width: 320px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-width: 320px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-width: 320px) and (min-resolution: 2dppx) {

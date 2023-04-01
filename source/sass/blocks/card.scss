@@ -1,0 +1,132 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 35px 60px;
+  background-color: $color-white;
+  border: 7px solid transparent;
+
+  @include vp-1199 {
+    padding: 56px 40px 60px;
+  }
+
+  @include vp-767 {
+    padding: 44px 34px 48px;
+  }
+
+  &:hover {
+    border-image: $crimson-smalt--to-right-bottom 1;
+  }
+}
+
+.card h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 26px;
+  line-height: 29px;
+  text-align: center;
+  color: $color-sapphire;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+.card p {
+  margin: 0;
+  margin-bottom: 65px;
+  color: $color-chambray;
+
+  @include vp-767 {
+    margin-bottom: 52px;
+  }
+}
+
+.card strong {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  margin-bottom: 34px;
+  margin-left: 1px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: $color-egyptian-blue;
+
+  @include vp-767 {
+    margin-bottom: 30px;
+    margin-left: 4px;
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  &::before {
+    content: attr(data-price);
+    position: absolute;
+    z-index: -1;
+    top: -54px;
+    left: 50%;
+    display: block;
+    font-size: 100px;
+    line-height: 150px;
+    color: $color-whisper;
+    transform: translateX(-50%);
+    opacity: 0.48;
+
+    @include vp-767 {
+      top: -45px;
+      font-size: 80px;
+      line-height: 120px;
+    }
+  }
+}
+
+.card span {
+  color: $color-sapphire;
+}
+
+.card a {
+  display: block;
+  width: 75%;
+  max-width: 400px;
+  margin-top: auto;
+  padding: 25px 30px 23px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-sapphire;
+  text-align: center;
+  border: 2px solid $color-sapphire;
+  user-select: none;
+  transition: opacity $trans-default;
+
+  @include vp-1199 {
+    width: 60%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-sapphire;
+    outline-offset: 4px;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.card:hover a {
+  color: $color-white;
+  border-color: $color-white;
+  background-image: $red-cobalt--to-right;
+}
