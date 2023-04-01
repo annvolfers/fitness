@@ -1,4 +1,25 @@
-// .button {
+.button {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-white;
+  border: 2px solid $color-white;
+  outline: 2px solid $color-white;
+  user-select: none;
+  transition: opacity $trans-default;
 
-//   &--secondary {}
-// }
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline-offset: 2px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

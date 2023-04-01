@@ -110,17 +110,6 @@
   margin-right: 32px;
   margin-bottom: 44px;
   padding: 21px 20px 20px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.05em;
-  color: $color-white;
-  text-align: center;
-  text-transform: uppercase;
-  border: 2px solid $color-white;
-  outline: 2px solid $color-white;
-  user-select: none;
-  transition: opacity $trans-default;
 
   @include vp-1199 {
     justify-self: self-end;
@@ -133,18 +122,6 @@
     width: calc(100% - 2px);
     margin-right: 2px;
     margin-bottom: 0;
-  }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:focus-visible {
-    outline-offset: 2px;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 
