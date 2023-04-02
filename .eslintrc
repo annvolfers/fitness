@@ -11,5 +11,6 @@ env:
 
 globals:
   YT: readonly
+  Swiper: readonly
 
 extends: "./eslintconfig.cjs"

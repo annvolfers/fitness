@@ -1,0 +1,102 @@
+.trainer {
+  &:hover {
+    box-shadow: 0 0 35px $color-gulf-blue--17;
+  }
+}
+
+.trainer__wrapper {
+  position: relative;
+  min-height: 0;
+  padding-bottom: 113.1%;
+
+  @include vp-1199 {
+    padding-bottom: 109.7%;
+  }
+
+  @include vp-767 {
+    padding-bottom: 121.2%;
+  }
+}
+
+.trainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainer__content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 52px 20px 22px;
+  overflow-y: auto;
+
+  @include vp-1199 {
+    padding: 52px 20px 22px 28px;
+  }
+}
+
+.trainer:hover .trainer__content-wrapper {
+  justify-content: flex-start;
+  background-color: $color-sapphire--89;
+
+  @include vp-1199 {
+    padding: 53px 20px 22px 13px;
+  }
+
+  @include vp-767 {
+    padding: 42px 20px 22px 20px;
+  }
+}
+
+.trainer h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 25px;
+  color: $color-white;
+  text-align: center;
+}
+
+.trainer p {
+  margin: 0;
+  margin-bottom: 31px;
+  color: $color-spindle;
+  text-align: center;
+}
+
+.trainer:not(:hover) p {
+  @include visually-hidden;
+}
+
+.trainer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0;
+  padding-left: 51px;
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-white;
+  list-style-type: disc;
+
+  @include vp-1199 {
+    padding-left: 58px;
+  }
+
+  @include vp-767 {
+    padding-left: 30px;
+  }
+}
+
+.trainer:not(:hover) .trainer__list {
+  @include visually-hidden;
+}

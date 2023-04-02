@@ -1,0 +1,81 @@
+.trainers {
+  padding-bottom: 55px;
+
+  @include vp-1199 {
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 70px;
+  }
+}
+
+.trainers h2 {
+  margin: 0 0 13px 2px;
+  font-family: $ff-alumni-sans;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin: 0 6px 0 0;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 12px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.trainers__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  max-width: 1274px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    justify-content: center;
+    gap: 11px;
+    max-width: calc(100% - 60px);
+  }
+
+  @include vp-767 {
+    max-width: calc(100% - 19px);
+    gap: 0;
+  }
+}
+
+.trainers__list-wrapper {
+  --maxWidthDesktop: 1230px;
+  --maxWidthTablet: calc(100% - 82px);
+
+  max-width: var(--maxWidthDesktop);
+  padding: 35px;
+
+  @include vp-1199 {
+    max-width: var(--maxWidthTablet);
+    padding: 29px;
+  }
+
+  @include vp-767 {
+    max-width: min(calc(100% - 35px), 500px);
+    padding: 30px 20px;
+
+    @include vp-767 {
+      margin: 0;
+    }
+  }
+}
+
+.trainers__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
