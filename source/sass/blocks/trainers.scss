@@ -36,39 +36,39 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0;
+  gap: 5px;
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
 
   @include vp-1199 {
     justify-content: center;
-    gap: 11px;
+    gap: 16px;
     max-width: calc(100% - 60px);
     padding: 0;
   }
 
   @include vp-767 {
     max-width: calc(100% - 19px);
-    gap: 0;
+    gap: 5px;
   }
 }
 
 .trainers__list-wrapper {
-  --maxWidthDesktop: 1230px;
-  --maxWidthTablet: calc(100% - 82px);
+  --maxWidthDesktop: 1220px;
+  --maxWidthTablet: calc(100% - 92px);
 
   max-width: var(--maxWidthDesktop);
-  padding: 35px;
+  padding: 35px 30px;
 
   @include vp-1199 {
     max-width: var(--maxWidthTablet);
-    padding: 29px;
+    padding: 29px 24px;
   }
 
   @include vp-767 {
-    max-width: min(calc(100% - 35px), 500px);
-    padding: 30px 20px;
+    max-width: min(calc(100% - 45px), 500px);
+    padding: 30px 15px;
 
     @include vp-767 {
       margin: 0;

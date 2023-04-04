@@ -32,7 +32,8 @@ export class Slider {
     this.options = {
       speed: 300,
       slidesPerView: 1,
-      loop: this.slidesCount > 1,
+      loop: false,
+      spaceBetween: 40,
       allowTouchMove: false,
       slideClass: 'slider__item',
       wrapperClass: 'slider__list',
@@ -42,6 +43,11 @@ export class Slider {
       },
       on: {
         beforeResize: this.debounce(this.setLayoutType),
+      },
+      breakpoints: {
+        [this.Layouts.mobile.minWidth]: {
+          allowTouchMove: true,
+        },
       },
     };
 
@@ -73,17 +79,19 @@ export class Slider {
   }
 
   setLayoutType() {
-    this.nextLayoutType = this.getLayoutType();
-    if (this.prevLayoutType !== this.nextLayoutType) {
+    if (this.slider.hasAttribute('data-multiple')) {
+      this.nextLayoutType = this.getLayoutType();
+      if (this.prevLayoutType !== this.nextLayoutType) {
 
-      if (this.nextLayoutType === this.Layouts.mobile) {
-        this.swiper.slideTo(Math.min(this.slidesCount, 3));
-      } else {
-        this.swiper.slideTo(Math.min(this.slidesCount, 4));
+        if (this.nextLayoutType === this.Layouts.mobile) {
+          this.swiper.slideTo(Math.min(this.slidesCount, 3));
+        } else {
+          this.swiper.slideTo(Math.min(this.slidesCount, 4));
+        }
+
+        this.updateButtonAvailability(this.nextLayoutType);
+        this.prevLayoutType = this.nextLayoutType;
       }
-
-      this.updateButtonAvailability(this.nextLayoutType);
-      this.prevLayoutType = this.nextLayoutType;
     }
   }
 

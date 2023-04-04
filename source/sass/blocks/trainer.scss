@@ -1,6 +1,10 @@
 .trainer {
   &:hover {
-    box-shadow: 0 0 35px $color-gulf-blue--17;
+    box-shadow: 0 0 30px $color-gulf-blue--17;
+
+    @include vp-767 {
+      box-shadow: 0 0 23px $color-gulf-blue--17;
+    }
   }
 }
 
