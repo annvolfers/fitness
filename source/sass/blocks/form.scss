@@ -1,0 +1,103 @@
+.form {
+  padding: 56px 170px 70px calc(100% - 580px);
+  background-color: $color-sapphire;
+
+  @include vp-1199 {
+    padding: 62px 163px 70px 133px;
+  }
+
+  @include vp-767 {
+    padding-top: 64px;
+    padding-bottom: 70px;
+  }
+}
+
+.form h2 {
+  margin: 0;
+  margin-bottom: 13px;
+  font-family: $ff-alumni-sans;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 84px;
+  letter-spacing: 0.03em;
+  color: $color-white;
+
+  @include vp-1199 {
+    margin-bottom: 28px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.03em;
+  }
+}
+
+.form__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  @include vp-1199 {
+    gap: 30px 60px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+.form input {
+  width: 100%;
+  padding: 10px 10px 5px 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color-light-slate-grey;
+
+  &::placeholder {
+    font-family: inherit;
+    color: $color-light-slate-grey;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    border-color: $color-white;
+    outline: none;
+  }
+}
+
+.form input[aria-invalid="true"] {
+  border-color: $color-crimson;
+}
+
+.form__button {
+  grid-column: 1 / -1;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 16px;
+
+  @include vp-767 {
+    margin-top: 12px;
+  }
+
+  &:disabled {
+    color: $color-light-slate-grey;
+    border-color: $color-light-slate-grey;
+    outline-color: $color-light-slate-grey;
+    cursor: default;
+    pointer-events: none;
+  }
+}

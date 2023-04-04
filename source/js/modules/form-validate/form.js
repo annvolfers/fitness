@@ -60,10 +60,13 @@ export class Form {
 
   _onFormSubmit(event, callback = null) {
     if (this.validateForm(event.target) && callback) {
+      const submitButton = event.target.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
       this._callbacks[callback].successCallback(event);
       if (this._callbacks[callback].reset) {
         setTimeout(() => {
           this.reset(event.target);
+          submitButton.disabled = false;
         }, this._callbacks[callback].resetTimeout ? this._callbacks[callback].resetTimeout : 500);
       }
       return;
