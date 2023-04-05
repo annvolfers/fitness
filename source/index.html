@@ -542,8 +542,8 @@
 
         <section class="contacts container">
           <h2>Контакты</h2>
-          <dl class="contacts__list">
-            <div class="contacts__group">
+          <div class="contacts__wrapper">
+            <dl class="contacts__list">
               <div class="contacts__item">
                 <dt>Адрес:</dt>
                 <dd>
@@ -556,8 +556,8 @@
                   <address>Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</address>
                 </dd>
               </div>
-            </div>
-            <div class="contacts__group">
+            </dl>
+            <dl class="contacts__list">
               <div class="contacts__item">
                 <dt>Телефон:</dt>
                 <dd>
@@ -574,14 +574,60 @@
                   </address>
                 </dd>
               </div>
-            </div>
-          </dl>
+            </dl>
+          </div>
         </section>
       </div>
     </main>
 
-    <footer>
-      <div class="container"></div>
+    <footer class="footer">
+      <div class="footer__container container">
+        <a class="footer__logo-link" href="index.html">
+          <svg class="footer__logo" width="86" height="17" role="img" aria-label="Логотип компании." focusable="false"
+            fill="currentColor">
+            <use xlink:href="./img/svg/logo.svg#logo" />
+          </svg>
+        </a>
+        <nav class="footer__nav">
+          <h2 class="visually-hidden">Разделы сайта.</h2>
+          <ul class="footer__nav-list">
+            <li>
+              <a href="#">Услуги</a>
+            </li>
+            <li>
+              <a href="#">Абонементы</a>
+            </li>
+            <li>
+              <a href="#">Акции</a>
+            </li>
+            <li>
+              <a href="#">Тренеры</a>
+            </li>
+            <li>
+              <a href="#">Расписание</a>
+            </li>
+          </ul>
+        </nav>
+        <section>
+          <h2 class="visually-hidden">Мы в социальных сетях.</h2>
+          <ul class="footer__social-list">
+            <li>
+              <a class="footer__social-link footer__social-link--vk" href="#">
+                <span class="visually-hidden">Вконтакте.</span>
+              </a>
+            <li>
+              <a class="footer__social-link footer__social-link--ok" href="#">
+                <span class="visually-hidden">Одноклассники.</span>
+              </a>
+            </li>
+            <li>
+              <a class="footer__social-link footer__social-link--reddit" href="#">
+                <span class="visually-hidden">Reddit.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
     </footer>
   </div>
 
