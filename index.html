@@ -38,7 +38,7 @@
           <li>Групповые занятия</li>
           <li>Кардио-зона</li>
         </ul>
-        <a class="intro__button button" href="#subscription">Купить абонемент</a>
+        <a class="intro__button button" href="#tariffs">Купить абонемент</a>
         <div class="intro__image-wrapper">
           <picture>
             <source type="image/webp" media="(max-width: 1199px)"
@@ -80,15 +80,15 @@
           <div class="gym__video-wrapper">
             <div class="video" data-container>
               <div class="video__iframe" id="9TZXsZItgdw" data-video></div>
-              <a class="video__button" href="https://www.youtube.com/watch?v=9TZXsZItgdw" data-play-button>
+              <button class="video__button" type="button" data-play-button>
                 <span class="visually-hidden">Включить видео.</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="tariffs">
+      <section class="tariffs" id="tariffs">
         <div class="tariffs__container container" data-tabs="parent">
           <h2>Абонементы</h2>
           <div class="tariffs__buttons-wrapper">
@@ -111,19 +111,19 @@
                   <h3>С&nbsp;тренером <span class="visually-hidden">1 месяц</span></h3>
                   <p>12 занятий</p>
                   <strong data-price="5000">5000&nbsp;<span>₽</span></strong>
-                  <a href="/trainer-month.html">купить абонемент</a>
+                  <a class="tariff__button" href="/trainer-month.html">купить абонемент</a>
                 </li>
                 <li class="tariff">
                   <h3>Дневной <span class="visually-hidden">1 месяц</span></h3>
                   <p>с&nbsp;8:00 до&nbsp;17:00</p>
                   <strong data-price="1700">1700&nbsp;<span>₽</span></strong>
-                  <a href="/day-month.html">купить абонемент</a>
+                  <a class="tariff__button" href="/day-month.html">купить абонемент</a>
                 </li>
                 <li class="tariff">
                   <h3>Полный день <span class="visually-hidden">1 месяц</span></h3>
                   <p>с&nbsp;8:00 до&nbsp;22:00</p>
                   <strong data-price="2700">2700&nbsp;<span>₽</span></strong>
-                  <a href="/full-day-month.html">купить абонемент</a>
+                  <a class="tariff__button" href="/full-day-month.html">купить абонемент</a>
                 </li>
               </ul>
             </li>
@@ -133,19 +133,19 @@
                   <h3>С&nbsp;тренером <span class="visually-hidden">6 месяцев</span></h3>
                   <p>72 занятия</p>
                   <strong data-price="25000">25000&nbsp;<span>₽</span></strong>
-                  <a href="/trainer-6-month.html">купить абонемент</a>
+                  <a class="tariff__button" href="/trainer-6-month.html">купить абонемент</a>
                 </li>
                 <li class="tariff">
                   <h3>Дневной <span class="visually-hidden">6 месяцев</span></h3>
                   <p>с&nbsp;8:00 до&nbsp;17:00</p>
                   <strong data-price="8200">8200&nbsp;<span>₽</span></strong>
-                  <a href="/day-6-month.html">купить абонемент</a>
+                  <a class="tariff__button" href="/day-6-month.html">купить абонемент</a>
                 </li>
                 <li class="tariff">
                   <h3>Полный день <span class="visually-hidden">6 месяцев</span></h3>
                   <p>с&nbsp;8:00 до&nbsp;22:00</p>
                   <strong data-price="14200">14200&nbsp;<span>₽</span></strong>
-                  <a href="/full-day-6-month.html">купить абонемент</a>
+                  <a class="tariff__button" href="/full-day-6-month.html">купить абонемент</a>
                 </li>
               </ul>
             </li>
@@ -155,19 +155,19 @@
                   <h3>С&nbsp;тренером <span class="visually-hidden">12 месяцев</span></h3>
                   <p>144 занятия</p>
                   <strong data-price="45000">45000&nbsp;<span>₽</span></strong>
-                  <a href="/trainer-year.html">купить абонемент</a>
+                  <a class="tariff__button" href="/trainer-year.html">купить абонемент</a>
                 </li>
                 <li class="tariff">
                   <h3>Дневной <span class="visually-hidden">12 месяцев</span></h3>
                   <p>с&nbsp;8:00 до&nbsp;17:00</p>
                   <strong data-price="14400">14400&nbsp;<span>₽</span></strong>
-                  <a href="/day-year.html">купить абонемент</a>
+                  <a class="tariff__button" href="/day-year.html">купить абонемент</a>
                 </li>
                 <li class="tariff">
                   <h3>Полный день <span class="visually-hidden">12 месяцев</span></h3>
                   <p>с&nbsp;8:00 до&nbsp;22:00</p>
                   <strong data-price="26400">26400&nbsp;<span>₽</span></strong>
-                  <a href="/full-day-year.html">купить абонемент</a>
+                  <a class="tariff__button" href="/full-day-year.html">купить абонемент</a>
                 </li>
               </ul>
             </li>
@@ -210,7 +210,10 @@
           <h2>Тренеры</h2>
         </div>
         <div class="trainers__wrapper" data-slider="root">
-          <div class="trainers__list-wrapper slider" data-slider="slider" data-multiple>
+          <button class="slider__button slider__button--prev" type="button" data-slider="button-prev">
+            <span class="visually-hidden">Предыдущий слайд.</span>
+          </button>
+          <div class="trainers__list-wrapper slider" data-slider="slider" data-multiple data-lock-focus>
             <ul class="trainers__list slider__list">
               <li class="trainer slider__item" data-slider="slide">
                 <div class="trainer__wrapper">
@@ -382,9 +385,6 @@
               </li>
             </ul>
           </div>
-          <button class="slider__button slider__button--prev" type="button" data-slider="button-prev">
-            <span class="visually-hidden">Предыдущий слайд.</span>
-          </button>
           <button class="slider__button slider__button--next" type="button" data-slider="button-next">
             <span class="visually-hidden">Следующий слайд.</span>
           </button>
@@ -464,6 +464,9 @@
       <section class="reviews container">
         <h2>Отзывы</h2>
         <div class="reviews__wrapper" data-slider="root">
+          <button class="slider__button slider__button--prev" type="button" data-slider="button-prev">
+            <span class="visually-hidden">Предыдущий слайд.</span>
+          </button>
           <div class="reviews__list-wrapper slider" data-slider="slider">
             <ul class="reviews__list slider__list">
               <li class="review slider__item" data-slider="slide">
@@ -507,9 +510,6 @@
               </li>
             </ul>
           </div>
-          <button class="slider__button slider__button--prev" type="button" data-slider="button-prev">
-            <span class="visually-hidden">Предыдущий слайд.</span>
-          </button>
           <button class="slider__button slider__button--next" type="button" data-slider="button-next">
             <span class="visually-hidden">Следующий слайд.</span>
           </button>
@@ -517,10 +517,10 @@
       </section>
 
       <div class="main-footer">
-        <section class="form container">
+        <section class="form">
           <h2>Бесплатное занятие</h2>
           <div data-form-validate="data-form-validate" data-callback="base">
-            <form class="form__wrapper" action="https://echo.htmlacademy.ru" method="post">
+            <form action="https://echo.htmlacademy.ru" method="post">
 
               <label data-validate-type="text" data-on-input-validate="data-on-input-validate" data-limitation="name"
                 data-required="data-required">
@@ -540,7 +540,7 @@
           </div>
         </section>
 
-        <section class="contacts container">
+        <section class="contacts">
           <h2>Контакты</h2>
           <div class="contacts__wrapper">
             <dl class="contacts__list">
