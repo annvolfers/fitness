@@ -53,6 +53,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  object-fit: contain;
 
   @include vp-767 {
     width: 68px;
