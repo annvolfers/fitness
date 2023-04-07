@@ -4,12 +4,16 @@ export class Video {
     this.video = document.querySelector('[data-video]');
     this.playButton = document.querySelector('[data-play-button]');
     this.youtubePlayer = null;
-
-    this.playButton.classList.add('disabled');
-    this.playButton.tabIndex = -1;
   }
 
   init() {
+    if (!this.container) {
+      return;
+    }
+
+    this.playButton.classList.add('disabled');
+    this.playButton.tabIndex = -1;
+
     this.loadScript('https://www.youtube.com/player_api', this.initPlayer.bind(this));
   }
 

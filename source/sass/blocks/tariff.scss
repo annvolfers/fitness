@@ -37,6 +37,7 @@
   margin: 0;
   margin-bottom: 65px;
   color: $color-chambray;
+  text-align: center;
 
   @include vp-767 {
     margin-bottom: 52px;
@@ -90,7 +91,7 @@
   color: $color-sapphire;
 }
 
-.tariff a {
+.tariff__button {
   display: block;
   width: 75%;
   max-width: 400px;
@@ -129,7 +130,7 @@
   }
 }
 
-.tariff:hover a {
+.tariff:hover .tariff__button {
   color: $color-white;
   border-color: $color-white;
   background-image: $red-cobalt--to-right;

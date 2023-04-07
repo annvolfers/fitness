@@ -148,7 +148,7 @@
 .promo__item-accent img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 
   @include vp-1199 {
     min-width: 399px;

@@ -1,8 +1,5 @@
 .intro {
   display: grid;
-  grid-template-areas: ". label image"
-    "list title image"
-    ". button image";
   grid-template-columns: 11.4% 25.3% 1fr;
   grid-template-rows: 1fr min-content min-content;
   gap: 17px;
@@ -13,16 +10,13 @@
   }
 
   @include vp-767 {
-    grid-template-areas: ". label"
-      "list title"
-      "button button";
     grid-template-columns: 38.8% 1fr;
     gap: 15px;
   }
 }
 
 .intro__label {
-  grid-area: label;
+  grid-column: 2 / 3;
   align-self: self-end;
   margin: 0;
   margin-left: 17px;
@@ -51,7 +45,7 @@
 }
 
 .intro__title {
-  grid-area: title;
+  grid-column: 2 / 3;
   margin: 0 47px 32px 0;
   font-family: $ff-alumni-sans;
   font-weight: 600;
@@ -82,7 +76,8 @@
 }
 
 .intro__list {
-  grid-area: list;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
   align-self: self-end;
   margin: 0;
   margin-bottom: 68px;
@@ -104,7 +99,7 @@
 }
 
 .intro__button {
-  grid-area: button;
+  grid-column: 2 / 3;
   justify-self: center;
   min-width: 230px;
   margin-right: 32px;
@@ -119,6 +114,7 @@
   }
 
   @include vp-767 {
+    grid-column: 1 / -1;
     width: calc(100% - 2px);
     margin-right: 2px;
     margin-bottom: 0;
@@ -126,7 +122,8 @@
 }
 
 .intro__image-wrapper {
-  grid-area: image;
+  grid-column: -2 / -1;
+  grid-row: 1 / -1;
 
   @include vp-767 {
     display: none;

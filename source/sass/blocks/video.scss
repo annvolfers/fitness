@@ -144,7 +144,7 @@
     pointer-events: none;
 
     &::after {
-      background-image: url("../img/svg/play-button-disabled.svg");
+      filter: grayscale(1) contrast(0.3);
     }
   }
 }

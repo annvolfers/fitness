@@ -2,13 +2,17 @@
   padding: 56px 170px 70px calc(100% - 580px);
   background-color: $color-sapphire;
 
+  @media (max-width: 1250px) {
+    padding-right: 148px;
+    padding-left: 45px;
+  }
+
   @include vp-1199 {
-    padding: 62px 163px 69px 133px;
+    padding: 62px 163px 70px 133px;
   }
 
   @include vp-767 {
-    padding-top: 64px;
-    padding-bottom: 70px;
+    padding: 64px 15px 70px;
   }
 }
 
@@ -39,7 +43,7 @@
   }
 }
 
-.form__wrapper {
+.form form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;

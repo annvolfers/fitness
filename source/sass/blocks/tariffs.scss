@@ -143,6 +143,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  user-select: none;
   transition: opacity $trans-default, color $trans-default;
 
   @include vp-1199 {

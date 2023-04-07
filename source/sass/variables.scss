@@ -10,7 +10,6 @@ $color-whisper:                     #e8e8e8;
 $color-spindle:                     #b6bdcc;
 $color-dark-gray:                   #afafaf;
 $color-light-slate-grey:            #74819c;
-$color-grey--20:                    rgba(#787878, 0.2);
 $color-chambray:                    #495a7d;
 $color-black-russian:               #030a1a;
 
@@ -22,7 +21,6 @@ $color-sapphire:                    #102654;
 $color-sapphire--50:                rgba($color-sapphire, 0.5);
 $color-sapphire--89:                rgba($color-sapphire, 0.89);
 $color-gulf-blue--17:               rgba(#2a3b63, 0.17);
-$color-midnight-express:            #000145;
 
 $color-torch-red:                   #ed0233;
 $color-crimson:                     #d10a42;
@@ -35,13 +33,12 @@ $red-cerulean--conic-desktop:       conic-gradient(from 133deg at 16.03% 39.06%,
 $red-cerulean--conic-tablet:        conic-gradient(from 144deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 $red-cerulean--conic-mobile:        conic-gradient(from 167.26deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 
-$cerulean-red--to-right-top:        linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
 $red-cobalt--to-right:              linear-gradient(97.05deg, $color-torch-red 17.6%, #003eb7 95.31%);
 $crimson-smalt--to-right-bottom:    linear-gradient(to right bottom, $color-crimson, #00359f);
 $crimson-cobalt--to-right-bottom:   linear-gradient(142.51deg, $color-crimson 0%, #0041ca 87.33%);
 $transparent-white--to-top-desktop: linear-gradient(to top, transparent 70px, $color-ghost-white 70px);
 $transparent-white--to-top-tablet:  linear-gradient(to top, transparent 60px, $color-ghost-white 60px);
-$grey-transparent--to-top:          linear-gradient(to top, $color-grey--20 2px, transparent 2px);
+$grey-transparent--to-top:          linear-gradient(to top, rgba(#787878, 0.2) 2px, transparent 2px);
 // Typography
 // ---------------------------------
 

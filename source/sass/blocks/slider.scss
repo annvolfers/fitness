@@ -40,10 +40,6 @@
     background-size: 10px 19px;
   }
 
-  &--prev {
-    order: -1;
-  }
-
   &--next {
     transform: rotate(180deg);
   }
@@ -58,10 +54,15 @@
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: 0.4;
   }
 
   &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &.hidden {
     opacity: 0;
     pointer-events: none;
   }

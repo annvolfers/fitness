@@ -30,15 +30,19 @@
   gap: 16px 50px;
   padding: 80px 79px 89px;
 
+  @media (max-width: 1250px) {
+    padding: 70px 79px 78px;
+  }
+
   @include vp-1199 {
     grid-template-columns: 58.1% 1fr;
     gap: 2px 29px;
     margin: auto;
-    padding: 47px 45px 51px;
+    padding: 46px 45px 50px;
   }
 
   @include vp-767 {
-    padding: 47px 45px 51px;
+    padding: 47px 45px 49px;
   }
 }
 
@@ -117,11 +121,14 @@
   grid-column: 1 / -1;
   margin: 0;
   margin-bottom: 28px;
+  margin-left: -3px;
   font-size: 18px;
   line-height: 27px;
   color: $color-white;
 
   @include vp-1199 {
+    margin-bottom: 30px;
+    margin-left: 0;
     font-size: 12px;
     line-height: 18px;
   }
@@ -157,7 +164,7 @@
 .announce img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 
   @include vp-1199 {
     min-width: 386px;
