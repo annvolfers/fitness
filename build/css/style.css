@@ -2283,7 +2283,7 @@ button,
 }
 
 .trainers {
-  padding-bottom: 55px;
+  padding-bottom: 105px;
 }
 
 .trainers h2 {
@@ -2520,8 +2520,8 @@ button,
 }
 
 .features {
-  margin-left: calc(50% - 650px);
-  padding: 146px calc(50% - 650px) 82px 0;
+  padding-top: 97px;
+  padding-bottom: 131px;
   background-color: #f8f9fc;
 }
 
@@ -2727,7 +2727,7 @@ button,
 }
 
 .promo {
-  padding-top: 151px;
+  padding-top: 101px;
   padding-bottom: 120px;
 }
 
@@ -3397,13 +3397,6 @@ button,
   }
 }
 
-@media (max-width: 1300px) {
-  .features {
-    margin-left: 0;
-    padding-right: 0;
-  }
-}
-
 @media (max-width: 1250px) {
   .announce__text-wrapper {
     padding: 70px 79px 78px;
@@ -3695,7 +3688,8 @@ button,
   }
 
   .features {
-    padding: 93px 0 92px;
+    padding-top: 93px;
+    padding-bottom: 92px;
   }
 
   .features h2 {
@@ -4125,7 +4119,8 @@ button,
   }
 
   .features {
-    padding: 64px 0 63px;
+    padding-top: 64px;
+    padding-bottom: 63px;
   }
 
   .features__container {

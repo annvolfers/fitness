@@ -1,19 +1,16 @@
 .features {
-  margin-left: calc(50% - 650px);
-  padding: 146px calc(50% - 650px) 82px 0;
+  padding-top: 97px;
+  padding-bottom: 131px;
   background-color: $color-ghost-white;
 
-  @media (max-width: 1300px) {
-    margin-left: 0;
-    padding-right: 0;
-  }
-
   @include vp-1199 {
-    padding: 93px 0 92px;
+    padding-top: 93px;
+    padding-bottom: 92px;
   }
 
   @include vp-767 {
-    padding: 64px 0 63px;
+    padding-top: 64px;
+    padding-bottom: 63px;
   }
 }
 
