@@ -464,7 +464,7 @@
       <section class="reviews container">
         <h2>Отзывы</h2>
         <div class="reviews__wrapper slider" data-slider="root">
-          <button class="slider__button slider__button--prev" type="button" data-slider="button-prev">
+          <button class="review__button slider__button slider__button--prev" type="button" data-slider="button-prev">
             <span class="visually-hidden">Предыдущий слайд.</span>
           </button>
           <div class="reviews__list-wrapper slider__wrapper" data-slider="slider">
@@ -510,7 +510,7 @@
               </li>
             </ul>
           </div>
-          <button class="slider__button slider__button--next" type="button" data-slider="button-next">
+          <button class="review__button slider__button slider__button--next" type="button" data-slider="button-next">
             <span class="visually-hidden">Следующий слайд.</span>
           </button>
         </div>
@@ -528,7 +528,7 @@
                 <input type="text" name="name" placeholder="Имя" required>
               </label>
 
-              <label data-validate-type="text" data-limitation="digit" data-on-input-validate="data-on-input-validate"
+              <label data-validate-type="text" data-limitation="digit-and-plus" data-on-input-validate="data-on-input-validate"
                 data-required="data-required">
                 <span class="visually-hidden">Телефон</span>
                 <input type="tel" name="phone" placeholder="Телефон" required>
