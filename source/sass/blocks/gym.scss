@@ -1,7 +1,6 @@
 .gym {
   display: grid;
   grid-template-columns: 35.7% 1fr;
-  align-items: center;
   gap: 86px;
   padding-top: 120px;
   padding-bottom: 120px;
@@ -21,6 +20,7 @@
 
 .gym__text-wrapper {
   margin-bottom: 107px;
+  padding-top: 39px;
   padding-left: 60px;
 
   @include vp-1199 {

@@ -7,6 +7,8 @@ export const getLimitationsRegEx = (limitation) => {
   switch (limitation) {
     case 'digit':
       return /[^\d]/g;
+    case 'digit-and-plus':
+      return /[^\d\+]/g;
     case 'name':
       return /[^a-zA-Zа-яёА-ЯЁ\-\s]/g;
     case 'letters':

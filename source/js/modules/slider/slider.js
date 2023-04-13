@@ -37,6 +37,7 @@ export class Slider {
       slidesPerView: 1,
       loop: this.isSliderMultiple,
       spaceBetween: 40,
+      autoHeight: true,
       slideClass: 'slider__item',
       wrapperClass: 'slider__list',
       navigation: {

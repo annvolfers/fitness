@@ -38,7 +38,6 @@
   display: flex;
   justify-content: space-between;
   gap: 5px;
-  align-items: center;
   max-width: 670px;
   margin: 0 auto;
 
@@ -66,4 +65,16 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.review__button {
+  margin-top: 145px;
+
+  @include vp-767 {
+    margin-top: 160px;
+  }
+
+  @media (max-width: 350px) {
+    margin-top: 198px;
+  }
 }

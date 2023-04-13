@@ -1757,9 +1757,6 @@ button,
   display: grid;
   -ms-grid-columns: 35.7% 1fr;
   grid-template-columns: 35.7% 1fr;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   gap: 86px;
   padding-top: 120px;
   padding-bottom: 120px;
@@ -1767,6 +1764,7 @@ button,
 
 .gym__text-wrapper {
   margin-bottom: 107px;
+  padding-top: 39px;
   padding-left: 60px;
 }
 
@@ -2278,8 +2276,8 @@ button,
 .announce img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .trainers {
@@ -2465,7 +2463,7 @@ button,
   -ms-flex-negative: 0;
   flex-shrink: 0;
   position: relative;
-  height: 100%;
+  height: auto;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   -o-transition-property: transform;
@@ -2839,8 +2837,8 @@ button,
 .promo__item-accent img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .promo__item {
@@ -2927,9 +2925,6 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 5px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   max-width: 670px;
   margin: 0 auto;
 }
@@ -2942,6 +2937,10 @@ button,
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.review__button {
+  margin-top: 145px;
 }
 
 .review {
@@ -4288,6 +4287,10 @@ button,
     padding: 40px 17px;
   }
 
+  .review__button {
+    margin-top: 160px;
+  }
+
   .review {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
@@ -4449,6 +4452,12 @@ button,
 @media (max-width: 599px) {
   .intro__title {
     margin-left: -40px;
+  }
+}
+
+@media (max-width: 350px) {
+  .review__button {
+    margin-top: 198px;
   }
 }
 
