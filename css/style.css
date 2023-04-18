@@ -2322,6 +2322,10 @@ button,
   list-style-type: none;
 }
 
+.trainer {
+  overflow-y: hidden;
+}
+
 .trainer:hover,
 .trainer:focus {
   -webkit-box-shadow: 0 0 30px rgba(42, 59, 99, 0.17);
@@ -2341,11 +2345,14 @@ button,
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .trainer__content-wrapper {
+  --titleHeight: 0;
+  --paddingTop: 52px;
+  --paddingBottom: 22px;
   position: absolute;
   top: 0;
   left: 0;
@@ -2361,19 +2368,24 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  padding: 52px 20px 22px;
-  overflow-y: auto;
+  padding: var(--paddingTop) 20px var(--paddingBottom);
+  -webkit-transform: translateY(max(100% - var(--titleHeight) - var(--paddingTop) - var(--paddingBottom), 0px));
+  -ms-transform: translateY(max(100% - var(--titleHeight) - var(--paddingTop) - var(--paddingBottom), 0px));
+  transform: translateY(max(100% - var(--titleHeight) - var(--paddingTop) - var(--paddingBottom), 0px));
+  -webkit-transition: background-color 0.3s ease, padding 0.2s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, padding 0.2s ease, -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease, background-color 0.3s ease, padding 0.2s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, padding 0.2s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, padding 0.2s ease, -webkit-transform 0.3s ease;
 }
 
 .trainer:hover .trainer__content-wrapper,
 .trainer:focus .trainer__content-wrapper {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   background-color: rgba(16, 38, 84, 0.89);
+  overflow-y: auto;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .trainer h3 {
@@ -2389,20 +2401,15 @@ button,
   margin-bottom: 31px;
   color: #b6bdcc;
   text-align: center;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 
-.trainer:not(:hover):not(:focus) p {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  border: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
+.trainer:hover p,
+.trainer:focus p {
+  opacity: 1;
 }
 
 .trainer__list {
@@ -2420,20 +2427,15 @@ button,
   line-height: 21px;
   color: #ffffff;
   list-style-type: disc;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 
-.trainer:not(:hover):not(:focus) .trainer__list {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  border: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
+.trainer:hover .trainer__list,
+.trainer:focus .trainer__list {
+  opacity: 1;
 }
 
 .slider__wrapper {
@@ -3021,7 +3023,11 @@ button,
   gap: 30px;
 }
 
-.form input {
+.form__field {
+  position: relative;
+}
+
+.form__field input {
   width: 100%;
   padding: 10px 10px 5px 0;
   font-size: 14px;
@@ -3032,42 +3038,47 @@ button,
   border-bottom: 1px solid #74819c;
 }
 
-.form input::-webkit-input-placeholder {
-  font-family: inherit;
-  color: #74819c;
+.form__field input:hover {
+  border-color: #ffffff;
 }
 
-.form input::-moz-placeholder {
-  font-family: inherit;
-  color: #74819c;
-}
-
-.form input:-ms-input-placeholder {
-  font-family: inherit;
-  color: #74819c;
-}
-
-.form input::-ms-input-placeholder {
-  font-family: inherit;
-  color: #74819c;
-}
-
-.form input::placeholder {
-  font-family: inherit;
-  color: #74819c;
-}
-
-.form input:hover {
-  opacity: 0.7;
-}
-
-.form input:focus {
+.form__field input:focus {
   border-color: #ffffff;
   outline: none;
 }
 
-.form input[aria-invalid=true] {
+.form__field input[aria-invalid=true] {
   border-color: #d10a42;
+}
+
+.form label {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.form__field input:not(:-moz-placeholder-shown) + label {
+  transform: translateY(-20px) scale(0.9);
+}
+
+.form__field input:not(:-ms-input-placeholder) + label {
+  -ms-transform: translateY(-20px) scale(0.9);
+  transform: translateY(-20px) scale(0.9);
+}
+
+.form__field input:focus + label,
+.form__field input:not(:placeholder-shown) + label {
+  -webkit-transform: translateY(-20px) scale(0.9);
+  -ms-transform: translateY(-20px) scale(0.9);
+  transform: translateY(-20px) scale(0.9);
 }
 
 .form__button {
@@ -3674,7 +3685,8 @@ button,
   }
 
   .trainer__content-wrapper {
-    padding: 52px 20px 22px 28px;
+    padding-right: 20px;
+    padding-left: 28px;
   }
 
   .trainer:hover .trainer__content-wrapper,

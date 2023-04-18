@@ -8,6 +8,10 @@
   <meta name="description" content="Омский фитнес центр">
   <title>SuperGym</title>
   <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="./fonts/alumni-sans/AlumniSans-SemiBold.woff2" type="font/woff2" as="font"
     crossorigin="anonymous">
   <link rel="preload" href="./fonts/roboto-condensed/RobotoCondensed-Regular.woff2" type="font/woff2" as="font"
@@ -522,17 +526,19 @@
           <div data-form-validate="data-form-validate" data-callback="base">
             <form action="https://echo.htmlacademy.ru" method="post">
 
-              <label data-validate-type="text" data-on-input-validate="data-on-input-validate" data-limitation="name"
-                data-required="data-required">
+              <div class="form__field" data-validate-type="text" data-on-input-validate="data-on-input-validate"
+                data-limitation="name" data-required="data-required">
                 <span class="visually-hidden">Имя</span>
-                <input type="text" name="name" placeholder="Имя" required>
-              </label>
+                <input type="text" name="name" id="name" placeholder=" " required>
+                <label for="name">Имя</label>
+              </div>
 
-              <label data-validate-type="text" data-limitation="digit-and-plus" data-on-input-validate="data-on-input-validate"
-                data-required="data-required">
+              <div class="form__field" data-validate-type="text" data-limitation="digit-and-plus"
+                data-on-input-validate="data-on-input-validate" data-required="data-required">
                 <span class="visually-hidden">Телефон</span>
-                <input type="tel" name="phone" placeholder="Телефон" required>
-              </label>
+                <input type="tel" name="phone" id="phone" placeholder=" " required>
+                <label for="phone">Телефон</label>
+              </div>
 
               <button class="form__button button" type="submit">отправить</button>
 
