@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {Video} from './modules/video/video';
 import {Tabs} from './modules/tabs/tabs';
 import {initSliders} from './modules/slider/init-sliders';
+import {Trainers} from './modules/trainers/trainers';
 import {Form} from './modules/form-validate/form';
 
 // ---------------------------------
@@ -26,6 +27,9 @@ window.addEventListener('DOMContentLoaded', () => {
     window.tabs = tabs;
 
     initSliders();
+
+    const trainers = new Trainers();
+    trainers.init();
 
     const form = new Form();
     window.form = form;
