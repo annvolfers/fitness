@@ -29,6 +29,7 @@ export class Slider {
 
   init() {
     this.swiper = new Swiper(`.${this.slider.classList[0]}`, this.options);
+    this.setLayoutType();
   }
 
   setSliderOptions() {

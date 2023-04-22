@@ -1,5 +1,15 @@
 .trainer {
+  position: relative;
+  aspect-ratio: 260 / 294;
   overflow-y: hidden;
+
+  @include vp-1199 {
+    aspect-ratio: 268 / 294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226 / 274;
+  }
 
   &:hover,
   &:focus {
@@ -9,20 +19,6 @@
     @include vp-767 {
       box-shadow: 0 0 23px $color-gulf-blue--17;
     }
-  }
-}
-
-.trainer__wrapper {
-  position: relative;
-  min-height: 0;
-  padding-bottom: 113.1%;
-
-  @include vp-1199 {
-    padding-bottom: 109.7%;
-  }
-
-  @include vp-767 {
-    padding-bottom: 121.2%;
   }
 }
 
@@ -40,14 +36,10 @@
   --paddingTop: 52px;
   --paddingBottom: 22px;
 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
   padding: var(--paddingTop) 20px var(--paddingBottom);
   transform: translateY(max(calc(100% - var(--titleHeight) - var(--paddingTop) - var(--paddingBottom)), 0px));
   transition: transform $trans-default, background-color $trans-default, padding $trans-200;
