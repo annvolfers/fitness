@@ -1,3 +1,5 @@
+import {debounce} from '../../utils/utils';
+
 export class Slider {
   constructor(element) {
     this.root = element;
@@ -46,7 +48,7 @@ export class Slider {
         prevEl: this.buttonPrev,
       },
       on: {
-        beforeResize: this.debounce(this.setLayoutType),
+        beforeResize: debounce(this, this.setLayoutType),
         slideChangeTransitionEnd: (swiper) => this.setSlideTabIndex(swiper),
       },
       breakpoints: {
@@ -154,14 +156,5 @@ export class Slider {
         slide.tabIndex = -1;
       }
     });
-  }
-
-  debounce(callback, timeoutDelay = 300) {
-    let timeoutId;
-
-    return (...rest) => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
-    };
   }
 }
