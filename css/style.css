@@ -2323,6 +2323,8 @@ button,
 }
 
 .trainer {
+  position: relative;
+  aspect-ratio: 260/294;
   overflow-y: hidden;
 }
 
@@ -2331,12 +2333,6 @@ button,
   -webkit-box-shadow: 0 0 30px rgba(42, 59, 99, 0.17);
   box-shadow: 0 0 30px rgba(42, 59, 99, 0.17);
   outline: none;
-}
-
-.trainer__wrapper {
-  position: relative;
-  min-height: 0;
-  padding-bottom: 113.1%;
 }
 
 .trainer img {
@@ -2353,11 +2349,6 @@ button,
   --titleHeight: 0;
   --paddingTop: 52px;
   --paddingBottom: 22px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2368,6 +2359,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 100%;
   padding: var(--paddingTop) 20px var(--paddingBottom);
   -webkit-transform: translateY(max(100% - var(--titleHeight) - var(--paddingTop) - var(--paddingBottom), 0px));
   -ms-transform: translateY(max(100% - var(--titleHeight) - var(--paddingTop) - var(--paddingBottom), 0px));
@@ -3680,8 +3672,8 @@ button,
     padding: 29px 24px;
   }
 
-  .trainer__wrapper {
-    padding-bottom: 109.7%;
+  .trainer {
+    aspect-ratio: 268/294;
   }
 
   .trainer__content-wrapper {
@@ -4104,14 +4096,14 @@ button,
     padding: 30px 15px;
   }
 
+  .trainer {
+    aspect-ratio: 226/274;
+  }
+
   .trainer:hover,
   .trainer:focus {
     -webkit-box-shadow: 0 0 23px rgba(42, 59, 99, 0.17);
     box-shadow: 0 0 23px rgba(42, 59, 99, 0.17);
-  }
-
-  .trainer__wrapper {
-    padding-bottom: 121.2%;
   }
 
   .trainer:hover .trainer__content-wrapper,
